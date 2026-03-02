@@ -21,13 +21,13 @@
         <h2>Zugang</h2>
         <p class="error" id="errorMsg">Falsches Passwort</p>
         <input type="password" id="passwordInput" placeholder="Passwort eingeben" onkeypress="if(event.key==='Enter')unlock()">
-        <button onclick="unlock()">Oeffnen</button>
+        <button onclick="unlock()">Öffnen</button>
     </div>
     <div class="content" id="content"></div>
 
     <script>
         const VERIFY = "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae";
-        const CONTENT = "<h1>Hello Christian</h1><p>Dies ist eine passwortgeschuetzte Testseite fuer Projekt 1.</p>";
+        const CONTENT = "<h1>Hello Christian</h1><p>Dies ist eine passwortgeschützte Testseite für Projekt 1.</p>";
 
         async function sha256(text) {
             const data = new TextEncoder().encode(text);
