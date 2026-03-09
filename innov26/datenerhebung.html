@@ -4,6 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datenerhebung Betreiber — Vollständige Übersicht</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  /* ========== NAVIGATION ========== */
+  .site-nav {
+    background: #1a3a5c;
+    padding: 8px 15mm;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .site-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 9.5pt;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .site-nav a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+  .site-nav a.nav-active { background: #2980b9; color: #fff; font-weight: 600; }
+  .site-nav .nav-brand {
+    font-weight: 700;
+    color: #fff;
+    font-size: 10pt;
+    margin-right: 10px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+  @media print { .site-nav { display: none; } }
+</style>
 <style>
   :root {
     --primary: #1a3a5c;
@@ -66,6 +101,18 @@
 </style>
 </head>
 <body>
+<script>
+  if (sessionStorage.getItem('if25auth') !== '572c59856823eb9418594e39bdeca72b8008c0490a4e26ce2f3689ccd603c7c5') {
+    window.location.href = 'index.html';
+  }
+</script>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">IF25 NZT</a>
+  <a href="strukturplan.html">Strukturplan &amp; To-Do</a>
+  <a href="phasenplan.html">Phasenplan</a>
+  <a href="datenerhebung.html" class="nav-active">Datenerhebung</a>
+</nav>
 
 <!-- ==================== DECKBLATT ==================== -->
 <div class="cover">
