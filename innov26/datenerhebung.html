@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenerhebung Betreiber — Vollständige Übersicht</title>
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --accent: #2980b9;
+    --success: #27ae60;
+    --warning: #e67e22;
+    --danger: #c0392b;
+    --light-bg: #f8f9fa;
+    --border: #dde1e5;
+    --text: #2c3e50;
+    --betreiber: #27ae60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Calibri, Arial, sans-serif; font-size: 10pt; color: var(--text); line-height: 1.5; max-width: 210mm; margin: 0 auto; text-align: justify; padding: 0 12mm; }
+
+  .cover { background: linear-gradient(135deg, var(--primary) 0%, #2c5f8a 100%); color: #fff; padding: 18mm 15mm; text-align: center; margin: 0 -12mm 6mm -12mm; }
+  .cover-label { font-size: 8pt; text-transform: uppercase; letter-spacing: 3px; background: rgba(255,255,255,0.15); display: inline-block; padding: 2px 14px; border-radius: 3px; margin-bottom: 4mm; }
+  .cover h1 { font-size: 18pt; margin-bottom: 3mm; }
+  .cover h2 { font-size: 12pt; font-weight: 400; opacity: 0.9; margin-bottom: 5mm; }
+  .cover-meta { font-size: 9pt; opacity: 0.85; line-height: 1.8; }
+
+  h2 { color: #fff; font-size: 12pt; background: var(--betreiber); padding: 2.5mm 4mm; margin: 6mm 0 3mm 0; page-break-before: always; }
+  h2:first-of-type { page-break-before: avoid; }
+  h3 { color: var(--primary); font-size: 10.5pt; margin: 4mm 0 2mm 0; border-bottom: 1px solid var(--border); padding-bottom: 1mm; }
+
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm 0; font-size: 9pt; }
+  th { background: var(--primary); color: #fff; padding: 2mm 3mm; text-align: left; font-weight: 600; font-size: 8.5pt; }
+  td { padding: 2mm 3mm; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) { background: var(--light-bg); }
+  .col-field { width: 40%; font-weight: 600; }
+  .col-hint { width: 35%; font-size: 8.5pt; color: #5d6d7e; }
+  .col-unit { width: 10%; text-align: center; }
+  .col-fill { width: 15%; background: #fffde7; border-left: 2px solid var(--warning); }
+
+  .phase-tag { display: inline-block; font-size: 8pt; font-weight: 700; color: #fff; padding: 1px 8px; border-radius: 3px; margin-left: 3mm; }
+  .phase-sofort { background: var(--danger); }
+  .phase-kw11 { background: var(--warning); }
+  .phase-kw13 { background: var(--accent); }
+  .phase-kw15 { background: #7f8c8d; }
+
+  .note { padding: 3mm 4mm; border-radius: 3px; margin: 3mm 0; font-size: 9pt; }
+  .note-danger { background: #fadbd8; border-left: 3px solid var(--danger); }
+  .note-info { background: #d4e6f1; border-left: 3px solid var(--accent); }
+  .note-success { background: #d5f5e3; border-left: 3px solid var(--success); }
+  .note-warning { background: #fdebd0; border-left: 3px solid var(--warning); }
+
+  .why-box { background: #eaf2f8; border: 1px solid var(--accent); border-radius: 3px; padding: 2mm 4mm; margin: 2mm 0 4mm 0; font-size: 8.5pt; }
+  .why-box strong { color: var(--accent); }
+
+  .deadline-bar { display: flex; justify-content: space-between; align-items: center; background: var(--light-bg); border: 1px solid var(--border); padding: 2mm 4mm; border-radius: 3px; margin-bottom: 3mm; }
+  .deadline-bar .dl-label { font-size: 9pt; font-weight: 600; }
+  .deadline-bar .dl-date { font-size: 10pt; font-weight: 700; }
+
+  ul { margin: 1mm 0 2mm 5mm; font-size: 9pt; }
+  li { margin-bottom: 1mm; }
+
+  .footer { border-top: 1px solid var(--border); padding: 3mm 0; margin-top: 6mm; font-size: 8pt; color: var(--text); display: flex; justify-content: space-between; }
+
+  @media print { body { padding: 0 10mm; } .cover { margin: 0 -10mm 6mm -10mm; } h2 { page-break-before: always; } h2:first-of-type { page-break-before: avoid; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== DECKBLATT ==================== -->
+<div class="cover">
+  <div class="cover-label">EU Innovation Fund IF25 &mdash; BioMeth-CO2 Bavaria</div>
+  <h1>Datenerhebung Betreiber</h1>
+  <h2>Vollst&auml;ndige &Uuml;bersicht aller ben&ouml;tigten Informationen</h2>
+  <div class="cover-meta">
+    <strong>Betrifft:</strong> Jeden der 7 Biogasanlagenbetreiber<br>
+    <strong>Absender:</strong> Energieberatung Schwaigkofler GmbH<br>
+    <strong>Stand:</strong> 9. M&auml;rz 2026 &mdash; <strong>Einreichungsfrist: 23. April 2026</strong>
+  </div>
+</div>
+
+<div class="note note-danger">
+  <strong>Wichtig:</strong> Die Daten werden f&uuml;r den EU-F&ouml;rderantrag beim Innovation Fund ben&ouml;tigt.
+  Ohne vollst&auml;ndige und fristgerechte Zulieferung ist eine Einreichung <strong>nicht m&ouml;glich</strong>.
+  Die Erhebung erfolgt in 5 Stufen &mdash; bitte beginnen Sie sofort mit Stufe 1 und 2.
+</div>
+
+<div class="note note-info">
+  <strong>Kontakt bei Fragen:</strong> Alexander Schwaigkofler | +49 821 567 316 77 | +49 160 79 68 932 | info@schwaigkofler.org
+</div>
+
+
+<!-- ======================================================== -->
+<!--       STUFE 1: DATENBLATT BIOGASANLAGE                    -->
+<!-- ======================================================== -->
+<h2>Stufe 1 &mdash; Datenblatt Biogasanlage <span class="phase-tag phase-sofort">SOFORT &mdash; bis 12. M&auml;rz</span></h2>
+
+<div class="note note-danger">
+  <strong>Urspr&uuml;ngliche Deadline war 10. M&auml;rz &mdash; bereits &uuml;berschritten!</strong>
+  Bitte das Datenblatt <strong>so schnell wie m&ouml;glich</strong> ausf&uuml;llen und an info@schwaigkofler.org senden.
+</div>
+
+<div class="why-box">
+  <strong>Warum brauchen wir das?</strong> Diese Daten bilden die Grundlage f&uuml;r die gesamte technische Beschreibung (Part B),
+  die Machbarkeitsstudie und das Financial Information File (FIF). Ohne diese Zahlen k&ouml;nnen wir kein einziges Antragsdokument fertigstellen.
+</div>
+
+<!-- 1.1 Betreiberinformationen -->
+<h3>1.1 Betreiberinformationen</h3>
+<table>
+  <thead><tr><th class="col-field">Feld</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Unternehmensname</td><td class="col-hint">Vollst&auml;ndiger Firmenname lt. Handelsregister</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Rechtsform</td><td class="col-hint">z.B. GmbH, GmbH &amp; Co. KG, e.K., GbR</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Handelsregister-Nr.</td><td class="col-hint">Oder Gewerberegister-Nr.</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Gesch&auml;ftsf&uuml;hrer / Inhaber</td><td class="col-hint">Name der vertretungsberechtigten Person</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Adresse (Firma)</td><td class="col-hint">Stra&szlig;e, PLZ, Ort</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">USt-ID</td><td class="col-hint">Umsatzsteuer-Identifikationsnummer (DE...)</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Ansprechpartner</td><td class="col-hint">Name, Telefon, E-Mail</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.2 Anlagenstandort -->
+<h3>1.2 Anlagenstandort</h3>
+<table>
+  <thead><tr><th class="col-field">Feld</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Adresse der Anlage</td><td class="col-hint">Falls abweichend von Firmenadresse</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">GPS-Koordinaten</td><td class="col-hint">Breitengrad, L&auml;ngengrad (z.B. &uuml;ber Google Maps)</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Landkreis</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Flurst&uuml;ck-Nr.</td><td class="col-hint">Aus Grundbuch/Kataster</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Abstand n&auml;chste Wohnbebauung</td><td class="col-hint">Sch&auml;tzwert in Metern reicht</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.3 Biogasproduktion -->
+<h3>1.3 Biogasproduktion</h3>
+<table>
+  <thead><tr><th class="col-field">Parameter</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Installierte Leistung (elektrisch)</td><td class="col-unit">kW<sub>el</sub></td><td class="col-hint">Nennleistung des/der BHKW</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Installierte Leistung (thermisch)</td><td class="col-unit">kW<sub>th</sub></td><td class="col-hint">Thermische Nennleistung</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Aktuelle Biogasproduktion</td><td class="col-unit">Nm&sup3;/h</td><td class="col-hint">Durchschnittlicher Volumenstrom Rohbiogas</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Methangehalt im Biogas</td><td class="col-unit">%</td><td class="col-hint">Typisch 50&ndash;55%, falls bekannt</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Betriebsstunden pro Jahr</td><td class="col-unit">h/a</td><td class="col-hint">Typisch 7.500&ndash;8.500 h/a</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">J&auml;hrliche Biogasproduktion</td><td class="col-unit">Nm&sup3;/a</td><td class="col-hint">= Nm&sup3;/h &times; Betriebsstunden</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">J&auml;hrliche Methanproduktion</td><td class="col-unit">Nm&sup3;/a</td><td class="col-hint">= Biogasproduktion &times; Methangehalt</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.4 Substratmix -->
+<h3>1.4 Substratmix</h3>
+<table>
+  <thead><tr><th style="width:25%">Substrat</th><th style="width:15%">Menge (t/a)</th><th style="width:12%">Anteil (%)</th><th style="width:20%">Herkunft</th><th class="col-hint">Hinweis</th></tr></thead>
+  <tbody>
+    <tr><td>Maissilage</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Eigenbau / Zukauf</td></tr>
+    <tr><td>Grassilage</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>Getreide-GPS</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>Rinderg&uuml;lle</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Eigener Bestand / Zukauf</td></tr>
+    <tr><td>Schweineg&uuml;lle</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>H&uuml;hnermist</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>Bioabfall</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>Sonstige: _________</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr style="font-weight:700;"><td><strong>Gesamt</strong></td><td class="col-fill"></td><td><strong>100%</strong></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="why-box">
+  <strong>Warum brauchen wir den Substratmix?</strong> Die GHG-Berechnung (Treibhausgasvermeidung) h&auml;ngt direkt vom Substratmix ab.
+  Der Anteil an G&uuml;lle/Mist bestimmt den GHG-Bonus, NaWaRo-Anteile den Referenzwert. Au&szlig;erdem relevant f&uuml;r die DNSH-Bewertung.
+</div>
+
+<!-- 1.5 Bestandsanlagen -->
+<h3>1.5 Bestandsanlagen (Technik vor Ort)</h3>
+<table>
+  <thead><tr><th style="width:22%">Komponente</th><th style="width:18%">Hersteller</th><th style="width:18%">Typ/Modell</th><th style="width:10%">Baujahr</th><th style="width:12%">Zustand</th><th class="col-hint">Hinweis</th></tr></thead>
+  <tbody>
+    <tr><td>Fermenter 1</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Volumen in m&sup3; wenn bekannt</td></tr>
+    <tr><td>Fermenter 2</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Falls vorhanden</td></tr>
+    <tr><td>Nachg&auml;rer</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+    <tr><td>Gasspeicher</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Volumen in m&sup3;</td></tr>
+    <tr><td>BHKW 1</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Leistung in kW</td></tr>
+    <tr><td>BHKW 2</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint">Falls vorhanden</td></tr>
+    <tr><td>Gasfackel</td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-fill"></td><td class="col-hint"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.6 Energieverbrauch -->
+<h3>1.6 Energieverbrauch und -erzeugung</h3>
+<table>
+  <thead><tr><th class="col-field">Parameter</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Eigenstromverbrauch der Anlage</td><td class="col-unit">kWh/a</td><td class="col-hint">Pumpen, R&uuml;hrwerke, Steuerung etc.</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Eigenw&auml;rmeverbrauch</td><td class="col-unit">kWh/a</td><td class="col-hint">Fermenterheizung etc.</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Stromeinspeisung ins Netz</td><td class="col-unit">kWh/a</td><td class="col-hint">Lt. EEG-Abrechnung</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">W&auml;rmeabgabe extern</td><td class="col-unit">kWh/a</td><td class="col-hint">An Dritte (Nahw&auml;rme etc.)</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">EEG-Verg&uuml;tung (aktuell)</td><td class="col-unit">ct/kWh</td><td class="col-hint">Durchschnittlicher Verg&uuml;tungssatz</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">EEG-Vertrag endet am</td><td class="col-unit">Datum</td><td class="col-hint">Wichtig f&uuml;r Wirtschaftlichkeitsberechnung!</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Flexibilit&auml;tspr&auml;mie beantragt?</td><td class="col-unit">Ja/Nein</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.7 Genehmigungsstatus -->
+<h3>1.7 Genehmigungsstatus</h3>
+<table>
+  <thead><tr><th class="col-field">Feld</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">BImSchG-Genehmigung vorhanden?</td><td class="col-hint">Ja / Nein</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Genehmigungsdatum</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Genehmigungs-Nr.</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Letzte &Auml;nderungsgenehmigung</td><td class="col-hint">Datum + Gegenstand</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">UVP durchgef&uuml;hrt?</td><td class="col-hint">Ja / Nein</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Natura-2000-Gebiet in der N&auml;he?</td><td class="col-hint">Ja / Nein, gesch&auml;tzter Abstand in Metern</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Wasserschutzgebiet?</td><td class="col-hint">Ja / Nein, welche Zone</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+<div class="why-box">
+  <strong>Warum brauchen wir den Genehmigungsstatus?</strong> Die DNSH-Bewertung (Do No Significant Harm) ist Pflichtbestandteil des Antrags.
+  Au&szlig;erdem muss in Part B die Genehmigungsstrategie dargelegt werden. Natura-2000 und Wasserschutzgebiete sind K.O.-Kriterien.
+</div>
+
+<!-- 1.8 Wirtschaftliche Daten -->
+<h3>1.8 Wirtschaftliche Basisdaten</h3>
+<table>
+  <thead><tr><th class="col-field">Parameter</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Jahresumsatz der Biogasanlage</td><td class="col-unit">EUR/a</td><td class="col-hint">Letztes abgeschlossenes Gesch&auml;ftsjahr</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">J&auml;hrliche Betriebskosten</td><td class="col-unit">EUR/a</td><td class="col-hint">Gesamtkosten</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">&ensp;davon Substratkosten</td><td class="col-unit">EUR/a</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">&ensp;davon Wartung/Instandhaltung</td><td class="col-unit">EUR/a</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">&ensp;davon Personalkosten</td><td class="col-unit">EUR/a</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Restbuchwert der Anlage</td><td class="col-unit">EUR</td><td class="col-hint">Lt. Bilanz</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Bestehende Verbindlichkeiten</td><td class="col-unit">EUR</td><td class="col-hint">Kredite, Darlehen</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<!-- 1.9 Erklaerung -->
+<h3>1.9 Erkl&auml;rung + Unterschrift</h3>
+<p style="margin-bottom: 3mm;">
+  Hiermit best&auml;tige ich die Richtigkeit der obigen Angaben und die Bereitschaft zur Teilnahme am
+  Konsortium f&uuml;r den EU Innovation Fund-Antrag IF25 NZT.
+</p>
+<table>
+  <tbody>
+    <tr><td class="col-field">Ort, Datum</td><td class="col-fill" style="width:60%;"></td></tr>
+    <tr><td class="col-field">Unterschrift</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Name in Druckbuchstaben</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Funktion</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+
+<!-- ======================================================== -->
+<!--       STUFE 2: ERGÄNZENDE TECHNISCHE DATEN                -->
+<!-- ======================================================== -->
+<h2>Stufe 2 &mdash; Erg&auml;nzende technische Daten <span class="phase-tag phase-kw11">Bis 17. M&auml;rz</span></h2>
+
+<div class="why-box">
+  <strong>Warum?</strong> Diese Daten verfeinern die technische Auslegung in der Machbarkeitsstudie und werden f&uuml;r die
+  GHG-Berechnung (CO2-Vermeidung) ben&ouml;tigt. Je genauer die Daten, desto besser die Bewertung durch die EU-Gutachter.
+</div>
+
+<h3>2.1 Erweiterte Leistungsdaten</h3>
+<table>
+  <thead><tr><th class="col-field">Parameter</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Elektrischer Wirkungsgrad BHKW</td><td class="col-unit">%</td><td class="col-hint">Lt. Datenblatt oder Messung</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Thermischer Wirkungsgrad BHKW</td><td class="col-unit">%</td><td class="col-hint"></td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Volllaststunden BHKW</td><td class="col-unit">h/a</td><td class="col-hint">Tats&auml;chlich im letzten Jahr</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Verf&uuml;gbarkeit der Anlage</td><td class="col-unit">%</td><td class="col-hint">Typisch 92&ndash;96%</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Ungeplante Stillstandzeiten</td><td class="col-unit">h/a</td><td class="col-hint">Durchschnitt letzte 3 Jahre</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<h3>2.2 Gasanalysen (soweit vorhanden)</h3>
+<div class="note note-success">
+  <strong>Hinweis:</strong> Falls keine Gasanalysen vorliegen, reicht ein kurzer Vermerk. Wir arbeiten dann mit Standardwerten.
+</div>
+<table>
+  <thead><tr><th class="col-field">Parameter</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Methangehalt (CH4)</td><td class="col-unit">Vol.-%</td><td class="col-hint">Typisch 50&ndash;55%</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Kohlendioxidgehalt (CO2)</td><td class="col-unit">Vol.-%</td><td class="col-hint">Typisch 40&ndash;48%</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Schwefelwasserstoff (H2S)</td><td class="col-unit">ppm</td><td class="col-hint">Relevant f&uuml;r Entschwefelung</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Siloxane</td><td class="col-unit">mg/Nm&sup3;</td><td class="col-hint">Falls gemessen</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Feuchtegehalt</td><td class="col-unit">%</td><td class="col-hint">Relative Feuchte am Gasaustritt</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Ammoniak (NH3)</td><td class="col-unit">ppm</td><td class="col-hint">Falls gemessen</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<h3>2.3 Bestehende Infrastruktur</h3>
+<table>
+  <thead><tr><th class="col-field">Frage</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Gasaufbereitung vorhanden?</td><td class="col-hint">Ja / Nein &mdash; wenn ja, welche Technologie?</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Biologische Entschwefelung?</td><td class="col-hint">Ja / Nein &mdash; Art und Zustand</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Gastrocknung vorhanden?</td><td class="col-hint">Ja / Nein &mdash; Typ</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Mess- und Regeltechnik</td><td class="col-hint">Welche Messwerte werden erfasst?</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Wartungsvertrag vorhanden?</td><td class="col-hint">Anbieter, Laufzeit bis wann?</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Geplante Investitionen n&auml;chste 3 Jahre</td><td class="col-hint">Ersatz/Erweiterung geplant?</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+
+<!-- ======================================================== -->
+<!--       STUFE 3: WIRTSCHAFTLICHE ZUSATZDATEN                -->
+<!-- ======================================================== -->
+<h2>Stufe 3 &mdash; Wirtschaftliche Zusatzdaten <span class="phase-tag phase-kw11">Bis 20. M&auml;rz</span></h2>
+
+<div class="why-box">
+  <strong>Warum?</strong> Das Financial Information File (FIF) ist ein Pflicht-Excel der EU. Dort m&uuml;ssen OPEX, Erl&ouml;se und
+  Investitionsbereitschaft belegt werden. Au&szlig;erdem flie&szlig;en diese Daten in den Business Plan und die GHG-Berechnung.
+</div>
+
+<h3>3.1 Bestehende Erl&ouml;sstr&ouml;me</h3>
+<table>
+  <thead><tr><th class="col-field">Erl&ouml;squelle</th><th class="col-unit">Einheit</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">EEG-Verg&uuml;tung (Strom)</td><td class="col-unit">EUR/a</td><td class="col-hint">Gesamterl&ouml;s lt. Abrechnung</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">W&auml;rmeverk&auml;ufe</td><td class="col-unit">EUR/a</td><td class="col-hint">Nahw&auml;rme, Trocknung etc.</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Flexibilit&auml;tspr&auml;mie</td><td class="col-unit">EUR/a</td><td class="col-hint">Falls beantragt</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Sonstige Einnahmen</td><td class="col-unit">EUR/a</td><td class="col-hint">G&auml;rrest-Verkauf, Sonstiges</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<h3>3.2 EEG-Abrechnungen</h3>
+<div class="note note-warning">
+  <strong>Bitte beilegen:</strong> Kopie der EEG-Verg&uuml;tungsabrechnung(en) der letzten 12 Monate (Netzbetreiber-Abrechnung).
+  Daraus entnehmen wir die tats&auml;chlichen Einspeisemengen und Verg&uuml;tungss&auml;tze.
+</div>
+
+<h3>3.3 Investitionsbereitschaft</h3>
+<table>
+  <thead><tr><th class="col-field">Frage</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Maximaler Eigenkapitalbeitrag</td><td class="col-hint">Betrag in EUR, den Sie bereit sind einzubringen</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Pr&auml;ferenz EK vs. FK</td><td class="col-hint">Lieber mehr Eigenkapital oder Fremdfinanzierung?</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Bestehende Bankbeziehung</td><td class="col-hint">Hausbank, die FK bereitstellen k&ouml;nnte</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Erwartete wirtschaftliche Auswirkungen</td><td class="col-hint">Was erhoffen Sie sich vom Projekt?</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+
+<!-- ======================================================== -->
+<!--       STUFE 4: STANDORT + FOTOS                           -->
+<!-- ======================================================== -->
+<h2>Stufe 4 &mdash; Standortinformationen + Fotos <span class="phase-tag phase-kw13">Bis 7. April</span></h2>
+
+<div class="why-box">
+  <strong>Warum?</strong> In Part B muss der Standort beschrieben werden (Kap. 4 &mdash; Maturity). Fotos zeigen den Gutachtern,
+  dass die Anlagen real existieren und betriebsbereit sind. Gute Fotos erh&ouml;hen die Glaubw&uuml;rdigkeit des Antrags.
+</div>
+
+<h3>4.1 Standortdetails</h3>
+<table>
+  <thead><tr><th class="col-field">Frage</th><th class="col-hint">Erl&auml;uterung</th><th class="col-fill">Ihre Angabe</th></tr></thead>
+  <tbody>
+    <tr><td class="col-field">Verf&uuml;gbare Fl&auml;che f&uuml;r Leitungsanschluss</td><td class="col-hint">m&sup2;, wo k&ouml;nnte die Leitung angeschlossen werden?</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Stromanschluss vor Ort</td><td class="col-hint">Vorhandene Kapazit&auml;t (kW/kVA)</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Zufahrt f&uuml;r Baufahrzeuge</td><td class="col-hint">Stra&szlig;enbreite, Tragf&auml;higkeit, Einschr&auml;nkungen</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Gel&auml;ndebeschaffenheit</td><td class="col-hint">Flach/h&uuml;gelig, Bodenart, Grundwasserstand</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Schutzgebiete in der N&auml;he</td><td class="col-hint">Naturschutz, Wasserschutz, Landschaftsschutz &mdash; Abstand</td><td class="col-fill"></td></tr>
+    <tr><td class="col-field">Benachbarte Bebauung/Nutzung</td><td class="col-hint">Wohngebiet, Gewerbe, Landwirtschaft</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Foto-Dokumentation</h3>
+<p style="margin-bottom: 2mm;">Bitte jeweils <strong>mind. 1 Foto</strong> der folgenden Bereiche (Smartphone-Qualit&auml;t reicht):</p>
+<table>
+  <thead><tr><th style="width:5%">Nr.</th><th style="width:35%">Motiv</th><th style="width:40%">Hinweis</th><th style="width:20%">Erledigt?</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Gesamt&uuml;bersicht Anlagenstandort</td><td>Aus Entfernung, gesamte Anlage sichtbar</td><td class="col-fill"></td></tr>
+    <tr><td>2</td><td>Fermenter / G&auml;rbeh&auml;lter</td><td>Von au&szlig;en</td><td class="col-fill"></td></tr>
+    <tr><td>3</td><td>Gasspeicher</td><td>Falls separater Speicher vorhanden</td><td class="col-fill"></td></tr>
+    <tr><td>4</td><td>BHKW-Geb&auml;ude / Container</td><td></td><td class="col-fill"></td></tr>
+    <tr><td>5</td><td>Potenzieller Leitungsanschluss</td><td>Bereich, wo Sammelleitung angeschlossen werden k&ouml;nnte</td><td class="col-fill"></td></tr>
+    <tr><td>6</td><td>Zufahrt / Erschlie&szlig;ung</td><td>Stra&szlig;e zur Anlage</td><td class="col-fill"></td></tr>
+  </tbody>
+</table>
+<div class="note note-info">
+  <strong>Format:</strong> JPG oder PNG, per E-Mail oder WeTransfer an info@schwaigkofler.org. Bitte Dateinamen mit Betreibername kennzeichnen.
+</div>
+
+
+<!-- ======================================================== -->
+<!--       STUFE 5: FINALE PRÜFUNG                             -->
+<!-- ======================================================== -->
+<h2>Stufe 5 &mdash; Finale Datenpr&uuml;fung + Best&auml;tigung <span class="phase-tag phase-kw15">Bis 14. April</span></h2>
+
+<div class="why-box">
+  <strong>Warum?</strong> Vor der Einreichung m&uuml;ssen alle Betreiber die aufbereiteten Zahlen best&auml;tigen.
+  Die EU verlangt konsistente Daten &uuml;ber alle Dokumente hinweg. Fehlerhafte Angaben f&uuml;hren zur Ablehnung.
+</div>
+
+<p>Wir senden Ihnen eine Zusammenfassung aller Ihrer Daten zur Pr&uuml;fung. Bitte pr&uuml;fen Sie:</p>
+<ul>
+  <li>Sind alle technischen Daten korrekt wiedergegeben?</li>
+  <li>Stimmen die wirtschaftlichen Angaben?</li>
+  <li>Ist der Standort korrekt beschrieben?</li>
+  <li>Gibt es &Auml;nderungen seit der ersten Datenlieferung?</li>
+</ul>
+
+<div class="note note-danger" style="margin-top: 3mm;">
+  <strong>Best&auml;tigung bis sp&auml;testens 14. April per E-Mail:</strong><br>
+  &bdquo;Ich best&auml;tige die Richtigkeit der aufbereiteten Daten f&uuml;r [Betreibername].&ldquo; &mdash; mit Name und Datum.
+</div>
+
+
+<!-- ======================================================== -->
+<!--       TIMELINE ZUSAMMENFASSUNG                            -->
+<!-- ======================================================== -->
+<h2 style="background: var(--primary);">Zeitplan auf einen Blick</h2>
+
+<table>
+  <thead><tr><th style="width:18%">Deadline</th><th style="width:52%">Was</th><th style="width:15%">Stufe</th><th style="width:15%">Status</th></tr></thead>
+  <tbody>
+    <tr class="overdue"><td><strong>SOFORT</strong><br>(war: 10.03.)</td><td>Datenblatt Biogasanlage vollst&auml;ndig</td><td>Stufe 1</td><td><span class="status-tag status-overdue">&Uuml;berf&auml;llig</span></td></tr>
+    <tr><td><strong>17. M&auml;rz</strong></td><td>Erg&auml;nzende technische Daten + Gasanalysen</td><td>Stufe 2</td><td><span class="status-tag status-urgent">Dringend</span></td></tr>
+    <tr><td><strong>20. M&auml;rz</strong></td><td>Wirtschaftliche Zusatzdaten + EEG-Abrechnungen</td><td>Stufe 3</td><td><span class="status-tag status-open">Offen</span></td></tr>
+    <tr><td><strong>3. April</strong></td><td>Standortspezifische Informationen</td><td>Stufe 4</td><td><span class="status-tag status-open">Offen</span></td></tr>
+    <tr><td><strong>7. April</strong></td><td>Foto-Dokumentation (6 Motive)</td><td>Stufe 4</td><td><span class="status-tag status-open">Offen</span></td></tr>
+    <tr><td><strong>14. April</strong></td><td>Finale Datenpr&uuml;fung + Best&auml;tigung</td><td>Stufe 5</td><td><span class="status-tag status-open">Offen</span></td></tr>
+  </tbody>
+</table>
+
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer">
+  <span>Energieberatung Schwaigkofler GmbH | Poststrasse 2, FL-9491 Ruggell | info@schwaigkofler.org</span>
+  <span>Stand: 9. M&auml;rz 2026</span>
+</div>
+
+</body>
+</html>
